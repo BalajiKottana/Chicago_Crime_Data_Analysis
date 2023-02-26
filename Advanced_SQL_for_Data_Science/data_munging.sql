@@ -61,14 +61,12 @@ Updated the columns complaint_date and updated_on_ts with the columns com_date a
 
 
 update chicago_complaints 
-set complaint_date=case 
-						when substring(com_date,21,2)='PM' then to_timestamp(concat(substring(com_date,7,4),'/',substring(com_date,1,2),'/',substring(com_date,4,2),substring(com_date,11,10)),'YYYY/MM/DD HH:MI:ss') + interval '12 hours'
-						else to_timestamp(concat(substring(com_date,7,4),'/',substring(com_date,1,2),'/',substring(com_date,4,2),substring(com_date,11,10)),'YYYY/MM/DD HH:MI:ss') end
+set complaint_date=case when substring(com_date,21,2)='PM' then to_timestamp(concat(substring(com_date,7,4),'/',substring(com_date,1,2),'/',substring(com_date,4,2),substring(com_date,11,10)),'YYYY/MM/DD HH:MI:ss') + interval '12 hours'
+			else to_timestamp(concat(substring(com_date,7,4),'/',substring(com_date,1,2),'/',substring(com_date,4,2),substring(com_date,11,10)),'YYYY/MM/DD HH:MI:ss') end;
 				
 update chicago_complaints 
-set updated_on_ts=case 
-						when substring(updated_on,21,2)='PM' then to_timestamp(concat(substring(updated_on,7,4),'/',substring(updated_on,1,2),'/',substring(updated_on,4,2),substring(updated_on,11,10)),'YYYY/MM/DD HH:MI:ss') + interval '12 hours'
-						else to_timestamp(concat(substring(updated_on,7,4),'/',substring(updated_on,1,2),'/',substring(updated_on,4,2),substring(updated_on,11,10)),'YYYY/MM/DD HH:MI:ss') end
+set updated_on_ts=case when substring(updated_on,21,2)='PM' then to_timestamp(concat(substring(updated_on,7,4),'/',substring(updated_on,1,2),'/',substring(updated_on,4,2),substring(updated_on,11,10)),'YYYY/MM/DD HH:MI:ss') + interval '12 hours'
+		else to_timestamp(concat(substring(updated_on,7,4),'/',substring(updated_on,1,2),'/',substring(updated_on,4,2),substring(updated_on,11,10)),'YYYY/MM/DD HH:MI:ss') end;
 
 
 -- Change the year column to integer
