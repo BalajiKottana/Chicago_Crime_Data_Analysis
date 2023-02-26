@@ -1,7 +1,7 @@
 /*
 The Chicago crime data set was used by the user for a project. This data set includes complaints that 
 have been recorded from 2001 up to the present time and can be accessed by the public through the 
-following URL: https://data.cityofchicago.org/Public-Safety/Crimes-2022/9hwr-2zxp/data
+following URL: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2
 
 
 The main objective was to provide insights on the available data using structured databases.To achieve this, I used 
