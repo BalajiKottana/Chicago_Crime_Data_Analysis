@@ -17,3 +17,5 @@ In the process of porting data from csv to postgresql instance, I used Alteryx, 
 ![image](https://user-images.githubusercontent.com/122858293/222927772-797214de-3e76-4824-9f93-56af31c81c10.png)
 
 These are basic steps used to port data and this orchastrated process can be saved and used for later usage. 
+
+In similar fashion, I ported police_station master and iucr_code master tables.
